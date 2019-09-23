@@ -1,0 +1,50 @@
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+header{
+    box-sizing: border-box;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20%;
+    transform-style: inherit;
+    width: 100vw;
+}
+header::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -2;
+    transform-origin: center;
+    min-height: 100vh;
+    background-image: url(/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;
+    transform: translateZ(-2px) scale(3);
+}
+/* header::after{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    overflow: hidden;
+    margin-bottom: 3000px;
+} */
